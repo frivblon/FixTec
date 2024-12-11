@@ -26,7 +26,7 @@ body {
     box-sizing: border-box;
     text-align: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: #1E90FF;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -102,7 +102,7 @@ body {
     justify-content: center; /* Centrado horizontal */
     align-items: center; /* Centrado vertical */
     height: calc(100vh - 80px); /* Tamaño del contenedor */
-    background-color: lightblue;
+    background-color: #ffffff;
     overflow: hidden;
    
   }
@@ -115,7 +115,7 @@ body {
     display: flex; /* Usa flexbox para organizar los elementos */
     justify-content: space-between; /* Espacia entre el logo y los enlaces */
     align-items: center; /* Alinea verticalmente los elementos */
-    background-color: lightgray;
+    background-color: #2C3E50;
     padding:0rem; /* Espaciado interno a los lados */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
 
@@ -124,6 +124,7 @@ body {
   .navbar-logo {
     font-size: 1.5rem;
     font-weight: bold;
+   margin-top: 15px;
   }
   
   .navbar-links {
@@ -140,7 +141,7 @@ body {
   
   .navbar-links li a {
     text-decoration: none; /* Sin subrayado */
-    color: black; /* Color del texto */
+    color: rgb(255, 255, 255); /* Color del texto */
     transition: color 0.3s ease; /* Animación para el cambio de color */
   }
   
@@ -148,9 +149,8 @@ body {
     color: #00bcd4; /* Color al pasar el mouse */
   }
   
-
   .footer {
-  background-color: #333;
+  background-color: #34495E;
   color: #fff;
   padding: 2rem 1rem;
   text-align: center;

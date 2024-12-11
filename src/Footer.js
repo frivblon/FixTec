@@ -6,13 +6,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h4>Enlaces Rápidos</h4>
-          <ul>
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Acerca de</a></li>
-            <li><a href="#services">Servicios</a></li>
-            <li><a href="#contact">Contacto</a></li>
-          </ul>
+          <h4>Domicilio particular:</h4>
+          <h5>Calle Prados De Soledad, Sierra de Alvarez #84</h5>
         </div>
         <div className="footer-section">
           <h4>Contáctanos</h4>
@@ -23,8 +18,6 @@ const Footer = () => {
           <h4>Síguenos</h4>
           <ul className="social-links">
             <li><a href="#facebook">Facebook</a></li>
-            <li><a href="#twitter">Twitter</a></li>
-            <li><a href="#instagram">Instagram</a></li>
           </ul>
         </div>
       </div>
