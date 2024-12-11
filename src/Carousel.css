@@ -32,7 +32,7 @@ body {
   }
   
   .item .content {
-    padding: 20px;
+    padding: 100px;
   }
   
   .item .name {
@@ -96,3 +96,112 @@ body {
     margin-bottom: 10px;
   }
   
+  .carousel-container {
+    margin: top 80px;
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    height: calc(100vh - 80px); /* Tamaño del contenedor */
+    background-color: lightblue;
+    overflow: hidden;
+   
+  }
+  .navbar {
+    position: fixed; /* Mantén la barra fija en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    height: 80px; /* Altura fija */
+    display: flex; /* Usa flexbox para organizar los elementos */
+    justify-content: space-between; /* Espacia entre el logo y los enlaces */
+    align-items: center; /* Alinea verticalmente los elementos */
+    background-color: lightgray;
+    padding:0rem; /* Espaciado interno a los lados */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    display: flex; /* Flexbox para organizar los enlaces horizontalmente */
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 20px;
+    gap: 1.0rem; /* Espaciado entre los elementos de la lista */
+  }
+  
+  .navbar-links li {
+    font-size: 1.0rem;
+  }
+  
+  .navbar-links li a {
+    text-decoration: none; /* Sin subrayado */
+    color: black; /* Color del texto */
+    transition: color 0.3s ease; /* Animación para el cambio de color */
+  }
+  
+  .navbar-links li a:hover {
+    color: #00bcd4; /* Color al pasar el mouse */
+  }
+  
+
+  .footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Ajusta el diseño en pantallas pequeñas */
+  justify-content: space-around;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 200px; /* Ajusta el tamaño de las secciones */
+  margin: 0.5rem 0;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-section ul li a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #555;
+  padding-top: 1rem;
+}
