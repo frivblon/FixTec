@@ -87,7 +87,7 @@ body {
   }
   
   .button .prev:hover, .button .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(249, 249, 249, 0.8);
   }
   
   .carousel-image {
