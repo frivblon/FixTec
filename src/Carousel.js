@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css";
+import Footer from "./Footer"; // Importa tu componente Footer
+import Navbar from "./navBar"; // Importa tu componente Navbar
 
 const destinations = [
   { 
@@ -46,34 +48,38 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carousel-container">
-      <div
-        className="slide"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {destinations.map((destination, index) => (
-          <div className="item" key={index}>
-            <div className="content">
-              <img 
-                src={destination.Image} 
-                alt={destination.name} 
-                className="carousel-image" 
-              />
-              <div className="name">{destination.name}</div>
-              <div className="des">{destination.description}</div>
-              <button>See More</button>
+    <div>
+      <Navbar /> {/* Aquí agregamos el Navbar */}
+      <div className="carousel-container">
+        <div
+          className="slide"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {destinations.map((destination, index) => (
+            <div className="item" key={index}>
+              <div className="content">
+                <img 
+                  src={destination.Image} 
+                  alt={destination.name} 
+                  className="carousel-image" 
+                />
+                <div className="name">{destination.name}</div>
+                <div className="des">{destination.description}</div>
+                <button>See More</button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="button">
+          <button className="prev" onClick={handlePrev}>
+            <i className="fa-solid fa-arrow-left"></i>
+          </button>
+          <button className="next" onClick={handleNext}>
+            <i className="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
       </div>
-      <div className="button">
-        <button className="prev" onClick={handlePrev}>
-          <i className="fa-solid fa-arrow-left"></i>
-        </button>
-        <button className="next" onClick={handleNext}>
-          <i className="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
+      <Footer /> {/* Aquí agregamos el Footer */}
     </div>
   );
 };
