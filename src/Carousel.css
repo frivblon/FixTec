@@ -139,7 +139,6 @@ body {
     background-color: #2C3E50;
     padding:0rem; /* Espaciado interno a los lados */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
-
   }
   
   .navbar-logo {
@@ -314,4 +313,77 @@ input, textarea {
 
 .google-map {
   margin-top: 20px;
+}
+
+/*----------------------------------------------------------------------Servicios----------------------------------------------*/
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Aseguramos que body y html llenen la ventana */
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor {
+  flex: 1;
+  padding: 20px;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.cuadros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cuadro {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 350px; /* Ajusta según tu diseño */
+}
+
+.nombre-servicio {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.descripcion-servicio {
+  font-size: 1rem;
+  text-align: center;
+  margin: 10px 0;
+  padding: 0 10px; /* Para evitar texto pegado al borde */
+}
+
+.imagen-servicio {
+  width: 100%;
+  flex-grow: 1; /* Para ocupar el espacio restante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imagen-servicio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Llena el espacio sin deformarse */
+}
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
