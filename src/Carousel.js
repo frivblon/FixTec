@@ -1,38 +1,42 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css";
-import Footer from "./Footer"; // Importa tu componente Footer
-import Navbar from "./navBar"; // Importa tu componente Navbar
+import Footer from "./Footer"; 
+import Navbar from "./navBar";
+
+// Importamos las imágenes desde la carpeta local
+import desarrolloImg from "./Desarrollo.png";
+import mantenimientoImg from "./Mantenimiento.png";
+import ciberseguridadImg from "./Ciberseguridad.png";
 
 const destinations = [
   { 
     name: "Desarrollo de Software", 
     description: "Expertos en el desarrollo de software de alta calidad.", 
-    Image: "https://lh3.googleusercontent.com/pw/AP1GczOHpNJRtLCCcHEY9IS44sXM_gbLMkXSbnJECJeXBWyZuCUwkLkmnKaogR7mGKdryBAfReBb4yA7kVGGjz41PltkvdBl9wiTiYEvqcWpjrGY4jnh3Y7xSRgLjg9PRc632U6lAfLTFciOv7a-Q2ltSjTY4Q=w309-h332-s-no-gm?authuser=0"
+    image: desarrolloImg
   },
   { 
     name: "Mantenimiento", 
     description: "Mantenimiento preventivo y correctivo para tus sistemas.", 
-    Image: "https://lh3.googleusercontent.com/pw/AP1GczOKQgM_JkMSnYpHX7SVIIycQlbX9P1DLmdep6YliYtS0HYScJSt7yEmKZsegJ2M4OkW_SdA9CfCm2cqOIZ9rkDjRNOQaFivnCH2eOyOZhYBT2YlWLR6h4D-5jABQOOnkktiCB1E_TsIDWkCvFdoDQcuhg=w433-h308-s-no-gm?authuser=0"
+    image: mantenimientoImg
   },
   { 
     name: "Ciberseguridad", 
     description: "Asesoramiento en seguridad cibernética para tu negocio.", 
-    Image: "https://lh3.googleusercontent.com/pw/AP1GczMtb_0ORNv7X2QgaRcRuADnZ9xfqqrP5_LcW9zOp3LE6p_U_DGvtr3R5bMKTvW7QkNgccd9fNI-9WKW3DyvF3j8N1naN3c0wqAx4FrKRsPthAMuVYFSaDYT8Ej4969XZC9C2zuco77LEcIbJXqsQgqEzA=w300-h300-s-no-gm?authuser=0"
+    image: ciberseguridadImg
   }
 ];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Función para avanzar automáticamente
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
         prevIndex < destinations.length - 1 ? prevIndex + 1 : 0
       );
-    }, 3000); // 3 segundos
+    }, 3000);
 
-    return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
+    return () => clearInterval(interval);
   }, []);
 
   const handlePrev = () => {
@@ -49,7 +53,7 @@ const Carousel = () => {
 
   return (
     <div>
-      <Navbar /> {/* Aquí agregamos el Navbar */}
+      <Navbar /> 
       <div className="carousel-container">
         <div
           className="slide"
@@ -59,7 +63,7 @@ const Carousel = () => {
             <div className="item" key={index}>
               <div className="content">
                 <img 
-                  src={destination.Image} 
+                  src={destination.image} 
                   alt={destination.name} 
                   className="carousel-image" 
                 />
@@ -79,7 +83,7 @@ const Carousel = () => {
           </button>
         </div>
       </div>
-      <Footer /> {/* Aquí agregamos el Footer */}
+      <Footer />
     </div>
   );
 };

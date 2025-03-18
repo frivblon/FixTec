@@ -12,6 +12,8 @@ const Navbar = () => {
         <li><a href="#about">Acerca de</a></li>
         <li><a href="#services">Servicios</a></li>
         <li><a href="#contact">Contacto</a></li>
+        <li><a href="#InicioSesion">Iniciar Sesion</a></li>
+        <li><a href="#Registro">Registrarse</a></li>
       </ul>
     </nav>
   );
